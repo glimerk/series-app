@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Series App</title>
+    <script src="./series.js"></script>
+    <link rel="stylesheet" href="./series.css">
+</head>
+<body>
+<h1>Series App</h1>
+
+<!-- Boton para obtener todas las series -->
+<h2>Series</h2>
+<button onclick="getValoraciones()">Ver Valoraciones</button>
+<div id="allSeriesResult"></div>
+
+<!-- Boton para obtener top series -->
+<h2>Top Series</h2>
+<button onclick="getTopSeries()">Ver Top Series</button>
+<div id="topSeriesResult"></div>
+
+<!-- Formulario para añadir una nueva serie -->
+<h2>Añadir Nueva Serie</h2>
+<form id="addSeriesForm">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required><br>
+
+    <label for="caratula">Caratula:</label>
+    <input type="text" id="caratula" required><br>
+
+    <label for="plataformaStreaming">Plataforma Streaming:</label>
+    <input type="text" id="plataformaStreaming" required><br>
+
+    <label for="sinopsis">Sinopsis</label>
+    <textarea id="sinopsis" required></textarea><br>
+
+    <button type="button" onclick="addSerie()">Añadir Serie</button>
+</form>
+<div id="addSeriesResult"></div>
+
+<!-- Formulario para añadir una valoracion a una serie -->
+<h2>Añadir Valoracion a Serie</h2>
+<form id="addValoracionForm">
+    <label for="idSerie">ID Serie:</label>
+    <input type="number" id="idSerie" required><br>
+    <label for="autor">Autor:</label>
+    <input type="text" id="autor" required><br>
+    <label for="valoracion">Valoracion:</label>
+    <input type="number" id="valoracion" min="0" max="10" required><br>
+    <button type="button" onclick="addValoracion()">Add Valoracion</button>
+</form>
+<div id="addValoracionResult"></div>
+
+</body>
+</html>

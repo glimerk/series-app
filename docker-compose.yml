@@ -1,0 +1,16 @@
+version: '3.8'  # Specify the version of docker-compose
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql_container
+    environment:
+      MYSQL_ROOT_PASSWORD: root  # Set the root password (replace with your secure password)
+      MYSQL_DATABASE: series        # Optional: create a database on startup
+    ports:
+      - "3306:3306"  # Expose MySQL port
+    volumes:
+      - mysql_data:/var/lib/mysql  # Mount the volume to persist MySQL data
+
+volumes:
+  mysql_data:
+    driver: local  # Default driver for persistent storage

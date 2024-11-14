@@ -1,0 +1,21 @@
+table {
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+img {
+    height: 40px;
+    width: 40px;
+}
+
+span {
+    margin-right: 10px;
+}
+
+.valoracion {
+    margin-left: 20px;
+}
